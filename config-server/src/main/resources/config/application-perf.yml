@@ -1,11 +1,10 @@
 spring:
   application:
-    name: greetingService
+    name: greeting-service
 
-# bind GreetingConfiguration
 greeting-service:
   greeting: "Olá"
-  default-value: "Mundo"
+  default-value: "Profile"
 
 # allow show all endpoints in Actuator, see /actuator
 management:

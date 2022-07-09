@@ -1,12 +1,14 @@
+server:
+  port: 8080
 spring:
   application:
     name: greetingService
-
-# bind GreetingConfiguration
-greeting-service:
-  greeting: "Olá"
-  default-value: "Mundo"
-
+  config:
+    import:
+      - optional:configserver:http://localhost:8888/
+    cloud:
+      config:
+        profile: qa
 # allow show all endpoints in Actuator, see /actuator
 management:
   endpoints:

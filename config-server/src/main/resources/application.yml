@@ -1,8 +1,23 @@
+server:
+  port: 8888
 spring:
   application:
     name: marcoshssilva-config-server
   profiles:
     active:
-      - native
-server:
-  port: 8888
+      # use native only to set a profile from this project (add in folder resources/config)
+      #- native
+  cloud:
+    config:
+      server:
+        git:
+          # username and password GitHub, when private repository
+          #username: root
+          #password: root
+          # uri repository GitHub
+          uri: https://github.com/marcoshssilva/marcoshssilva-config-server
+          try-master-branch: false
+          default-label: main
+          search-paths:
+            - 'greeting-service*'
+

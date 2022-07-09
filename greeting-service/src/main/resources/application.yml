@@ -2,6 +2,7 @@ spring:
   application:
     name: greetingService
 
+# bind GreetingConfiguration
 greeting-service:
   greeting: "Olá"
   default-value: "Mundo"

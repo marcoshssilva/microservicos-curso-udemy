@@ -5,3 +5,11 @@ spring:
 greeting-service:
   greeting: "Olá"
   default-value: "Mundo"
+
+# allow show all endpoints in Actuator, see /actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "*"
